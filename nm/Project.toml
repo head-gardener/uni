@@ -1,0 +1,17 @@
+name = "Uni"
+version = "0.1.0"
+
+[deps]
+Plots = ""
+
+[dev-dependencies]
+# No dev-dependencies specified for this example
+
+[extras]
+# No extras specified for this example
+
+[targets]
+default = []
+
+[target."test"]
+deps = []
