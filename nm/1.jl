@@ -83,7 +83,7 @@ end
 
 function chebyshev_range(a, b, n)
   0:(n-1) .|> (k -> begin
-    (a + b) / 2 + ((b - a) / 2 * cos((π * (2k + 1)) / 2(n)))
+    (a + b) / 2 + ((b - a) / 2 * cos((π * (2k + 1)) / 2n))
   end)
 end
 
