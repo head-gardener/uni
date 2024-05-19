@@ -38,12 +38,13 @@ f = (x, y) -> begin
     (u_, v_)
 end
 
-fee = explicit_euler(a, b, 1000, f, (0.0, 0.0))
-frk = runge_kutta_3(a, b, 1000, f, (0.0, 0.0))
+n = 1000
+fee = explicit_euler(a, b, n, f, (0.0, 0.0))
+frk = runge_kutta_3(a, b, n, f, (0.0, 0.0))
 
-fee[end] .- frk[end]
+println(fee[end] .- frk[end])
 
-xs = range(a, b, 1000)
+xs = range(a, b, n)
 plot(xs, fee .|> (x -> x[1]), label="u, Explicit Euler")
 plot!(xs, fee .|> (x -> x[2]), label="v, Explicit Euler")
 plot!(xs, frk .|> (x -> x[1]), label="u, Runge-Kutta 3")
